@@ -13,19 +13,30 @@ const images = [
   },
 ];
 
-const galleryList = document.querySelector(".gallery");
+////////  MAP !!!
 
-const newGallery = images.map(pics => {
-  
-  const newGalleryItem = ({ url, alt }) =>   
-    `<li><img src="${url}" alt="${alt}" width = 180 height = 130></li>`; 
-  // const newPic = document.createElement(`img`)
-  // // newPic.src = pics;
-  // // newGalleryItem.append(newPic)
-  // return newGalleryItem + newPic
-})
-galleryList.insertAdjacentHTML("afterbegin", newGallery);
-console.log(galleryList)
+// const galleryList = document.querySelector(".gallery");
+
+// const newGallery = images.map(pic => {
+// galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li></li>`)
+// })
+
+////////  FOR...OF !!!
+
+// const galleryList = document.querySelector(".gallery")
+// for (let pic of images) {
+//   galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li>`)
+// }
+images.forEach(function callback(element, index, array) {
+  // Тело коллбек-функции
+});
+const galleryList = document.querySelector(".gallery")
+for (let pic in images) {
+  galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li>`)
+}
+
+
+////////  MAP/APPEND !!!
 
 // const galleryList = document.querySelector(".gallery");
 // const newGallery = images.map(pics => {
@@ -42,18 +53,20 @@ console.log(galleryList)
 //   // console.log(newPics)
   
 //   return newGalleryItem
-  
 // })
 
-// galleryList.append(...newGallery); //work!!!
+// // galleryList.append(...newGallery); //work!!!
+// galleryList.insertAdjacentHTML("afterbegin", newGallery);
+  
+  
+////////  REDUCE !!!
+// const galleryList = document.querySelector(".gallery");
 
-
-// const createGalleryItem = ({ url, alt }) =>
+// const newGalleryItem = ({ url, alt }) =>
 //   `<li><img src="${url}" alt="${alt}" width = 180 height = 130></li>`;
-// const galleryMarkup = images.reduce(
-//   (acc, item) => acc + createGalleryItem(item),
+// const newGallery = images.reduce((acc, item) => 
+// acc + newGalleryItem(item),
 //   ""
 // );
-// const galleryList = document.querySelector("#gallery");
-// galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
-// galleryList.setAttribute("style", "list-style-type:none; display: flex;");
+// 
+// galleryList.insertAdjacentHTML("afterbegin", newGallery);
