@@ -13,7 +13,7 @@ const images = [
   },
 ];
 
-////////  MAP !!!
+////////  MAP !!! DONE
 
 // const galleryList = document.querySelector(".gallery");
 
@@ -21,45 +21,50 @@ const images = [
 // galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li></li>`)
 // })
 
-////////  FOR...OF !!!
+
+////////  FOR...OF !!! DONE
 
 // const galleryList = document.querySelector(".gallery")
 // for (let pic of images) {
 //   galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li>`)
 // }
-images.forEach(function callback(element, index, array) {
-  // Тело коллбек-функции
-});
-const galleryList = document.querySelector(".gallery")
-for (let pic in images) {
-  galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li>`)
-}
 
 
-////////  MAP/APPEND !!!
+////////  FOREACH !!! IN PROGRESS
 
-// const galleryList = document.querySelector(".gallery");
-// const newGallery = images.map(pics => {
-//   const newGalleryItem = document.createElement(`li`);
-//   const newPics = document.createElement(`img`)
+// images.forEach(function callback(element, index, array) {
+//   // Тело коллбек-функции
+// });
+// const galleryList = document.querySelector(".gallery")
+// for (let pic in images) {
+//   galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li>`)
+// }
 
-//   newPics.src = pics.url;
-//   newPics.alt = pics.alt;
-//   newPics.width = 180;
-//   newPics.height = 130;
 
-//   newGalleryItem.append(newPics);
-//   console.log(newGalleryItem)
-//   // console.log(newPics)
+////////  MAP/APPEND !!!  DONE
+
+const galleryList = document.querySelector(".gallery");
+const newGallery = images.map(pics => {
+  const newGalleryItem = document.createElement(`li`);
+  const newPics = document.createElement(`img`)
+
+  newPics.src = pics.url;
+  newPics.alt = pics.alt;
+  newPics.width = 180;
+  newPics.height = 130;
+
+  newGalleryItem.append(newPics);
+  console.log(newGalleryItem)
+  // console.log(newPics)
   
-//   return newGalleryItem
-// })
+  return newGalleryItem
+})
 
-// // galleryList.append(...newGallery); //work!!!
+// galleryList.append(...newGallery); //work!!!
 // galleryList.insertAdjacentHTML("afterbegin", newGallery);
   
   
-////////  REDUCE !!!
+////////  REDUCE !!! DONE
 // const galleryList = document.querySelector(".gallery");
 
 // const newGalleryItem = ({ url, alt }) =>
