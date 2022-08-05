@@ -15,50 +15,39 @@ const images = [
 
 ////////  MAP !!! DONE
 
-// const galleryList = document.querySelector(".gallery");
+const galleryList = document.querySelector(".gallery");
 
-// const newGallery = images.map(pic => {
-// galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li></li>`)
-// })
+const newGallery = images.map(pic => {
+galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li></li>`)
+})
 
 
 ////////  FOR...OF !!! DONE
 
-// const galleryList = document.querySelector(".gallery")
+// const galleryList1 = document.querySelector(".gallery")
 // for (let pic of images) {
-//   galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li>`)
-// }
-
-
-////////  FOREACH !!! IN PROGRESS
-
-// images.forEach(function callback(element, index, array) {
-//   // Тело коллбек-функции
-// });
-// const galleryList = document.querySelector(".gallery")
-// for (let pic in images) {
 //   galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li>`)
 // }
 
 
 ////////  MAP/APPEND !!!  DONE
 
-const galleryList = document.querySelector(".gallery");
-const newGallery = images.map(pics => {
-  const newGalleryItem = document.createElement(`li`);
-  const newPics = document.createElement(`img`)
+// const galleryList = document.querySelector(".gallery");
+// const newGallery = images.map(pics => {
+//   const newGalleryItem = document.createElement(`li`);
+//   const newPics = document.createElement(`img`)
 
-  newPics.src = pics.url;
-  newPics.alt = pics.alt;
-  newPics.width = 180;
-  newPics.height = 130;
+//   newPics.src = pics.url;
+//   newPics.alt = pics.alt;
+//   newPics.width = 180;
+//   newPics.height = 130;
 
-  newGalleryItem.append(newPics);
-  console.log(newGalleryItem)
-  // console.log(newPics)
+//   newGalleryItem.append(newPics);
+//   console.log(newGalleryItem)
+//   // console.log(newPics)
   
-  return newGalleryItem
-})
+//   return newGalleryItem
+// })
 
 // galleryList.append(...newGallery); //work!!!
 // galleryList.insertAdjacentHTML("afterbegin", newGallery);
@@ -75,3 +64,15 @@ const newGallery = images.map(pics => {
 // );
 // 
 // galleryList.insertAdjacentHTML("afterbegin", newGallery);
+
+
+
+////////  FOREACH !!! IN PROGRESS
+
+// images.forEach(function callback(element, index, array) {
+//   // Тело коллбек-функции
+// });
+// const galleryList = document.querySelector(".gallery")
+// for (let pic in images) {
+//   galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li>`)
+// }
