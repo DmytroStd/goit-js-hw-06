@@ -10,17 +10,29 @@ const ref = {
 }
 
 let squireSize = 30;
-let smallSquireSize = 5;
+let smallSquireSize = 20;
 
 
 function createSquares(sum) {
   let marking = "";
 
   for (let i = 0; i < sum; i += 1) {
-    marking += `<div style="width: ${squireSize}px; height: ${squireSize}px; background-color: ${getRandomHexColor()}; border: 3px solid ${getRandomHexColor()};
-    margin: 10px"></div>`;
+    marking += `<div style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: ${squireSize}px; 
+    height: ${squireSize}px; 
+    background-color: ${getRandomHexColor()}; 
+    border: 3px solid ${getRandomHexColor()};
+    margin: 10px"
+    ><div style="
+    width: ${smallSquireSize}px; 
+    height: ${smallSquireSize}px; 
+    background-color: ${getRandomHexColor()}; 
+       "></div></div>`;
     squireSize += 10;
-    smallSquireSize = squireSize - 5;
+    smallSquireSize = squireSize - 15;
   }
 ref.boxes.insertAdjacentHTML("beforeend", marking)
 }
