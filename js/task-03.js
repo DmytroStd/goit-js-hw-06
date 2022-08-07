@@ -64,15 +64,3 @@ galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pi
 // );
 // 
 // galleryList.insertAdjacentHTML("afterbegin", newGallery);
-
-
-
-////////  FOREACH !!! IN PROGRESS
-
-// images.forEach(function callback(element, index, array) {
-//   // Тело коллбек-функции
-// });
-// const galleryList = document.querySelector(".gallery")
-// for (let pic in images) {
-//   galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${pic.url}" alt="${pic.alt}" width = 180 height = 130></li>`)
-// }
