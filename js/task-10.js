@@ -51,4 +51,4 @@ function destroySquares() {
 }
 
 ref.createData.addEventListener("click", () => createSquares(ref.inputNum.value));
-ref.destroyData.addEventListener("click", () => destroySquares());
+ref.destroyData.addEventListener("click", e => destroySquares());
