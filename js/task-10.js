@@ -14,10 +14,11 @@ let smallSquireSize = 20;
 
 
 function createSquares(sum) {
-  let marking = "";
+  let marking = '';
 
   for (let i = 0; i < sum; i += 1) {
-    marking += `<div style="
+    marking += `<div 
+    style="
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,18 +27,27 @@ function createSquares(sum) {
     background-color: ${getRandomHexColor()}; 
     border: 3px solid ${getRandomHexColor()};
     margin: 10px"
-    ><div style="
+    >
+    <div 
+    style="
     width: ${smallSquireSize}px; 
     height: ${smallSquireSize}px; 
-    background-color: ${getRandomHexColor()}; 
-       "></div></div>`;
+    background-color: ${getRandomHexColor()};
+    // transform: rotate(45deg) 
+       "></div>
+       </div>`;
     squireSize += 10;
-    smallSquireSize = squireSize - 30;
+    smallSquireSize = squireSize - 20;
   }
-ref.boxes.insertAdjacentHTML("beforeend", marking)
+  
+  ref.boxes.insertAdjacentHTML("afterbegin", marking)
+  
 }
 function destroySquares() {
-  ref.boxes.innerHTML = "";
+  ref.boxes.innerHTML = '';
+  ref.inputNum.value = '';
+  
+  
 }
 
 ref.createData.addEventListener("click", () => createSquares(ref.inputNum.value));
