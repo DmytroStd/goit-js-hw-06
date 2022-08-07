@@ -32,7 +32,7 @@ function createSquares(sum) {
     background-color: ${getRandomHexColor()}; 
        "></div></div>`;
     squireSize += 10;
-    smallSquireSize = squireSize - 15;
+    smallSquireSize = squireSize - 30;
   }
 ref.boxes.insertAdjacentHTML("beforeend", marking)
 }
